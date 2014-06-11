@@ -1,4 +1,7 @@
 class Book < ActiveRecord::Base
+  has_many :checkouts
+  has_many :category
+
   validates :title, presence: true
   validates :author, presence: true
   validates :rating, numericality: {
